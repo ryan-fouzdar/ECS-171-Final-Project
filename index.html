@@ -7,8 +7,8 @@
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 
 <body>
@@ -35,79 +35,67 @@
         <br>
         </h5>
       </div>
-
+    <!--ROWS FOR INPUTS -->
               <div class="row">
     <form action='/predict' method="POST" class="col s12">
       <div class="row">
 
         <div class="input-field col s4">
-            <label for="first_name"><b>Number of Pregnancies</b></label>
+            <label for="first_name"><b>Pregnancies</b></label>
             <br>
-          <input   id="first_name" name='Temperature'type="text" class="validate">
+          <input   id="first_name" name='Pregnancies'type="text" class="validate">
         </div>
         <div class="input-field col s4">
 
-          <label for="last_name"><b>Glucose Levels</b></label>
+          <label for="last_name"><b>Glucose</b></label>
             <br>
-          <input id="last_name"  name="Oxygen" type="text" class="validate">
+          <input id="last_name"  name="Glucose" type="text" class="validate">
 
         </div>
 
         <div class="input-field col s4">
             <label for="_name"><b>Blood Pressure</b></label>
             <br>
-          <input id="_name" name="Humidity" type="text" class="validate">
+          <input id="_name" name="BloodPressure" type="text" class="validate">
 
         </div>
 
         <div class="input-field col s4">
-            <label for="first_name"><b>SkinThickness</b></label>
+            <label for="first_name"><b>Skin Thickness</b></label>
             <br>
-          <input   id="first_name" name='Temperature'type="text" class="validate">
+          <input   id="first_name" name='SkinThickess'type="text" class="validate">
         </div>
         <div class="input-field col s4">
 
-          <label for="last_name"><b>Insulin </b></label>
+          <label for="last_name"><b>Insulin</b></label>
             <br>
-          <input id="last_name"  name="Oxygen" type="text" class="validate">
-
-        </div>
-
-        <div class="input-field col s4">
-            <label for="_name"><b>BMI</b></label>
-            <br>
-          <input id="_name" name="Humidity" type="text" class="validate">
-
-        </div>
-        <div class="input-field col s4">
-
-          <label for="last_name"><b>Insulin </b></label>
-            <br>
-          <input id="last_name"  name="Oxygen" type="text" class="validate">
+          <input id="last_name"  name="Insulin" type="text" class="validate">
 
         </div>
 
         <div class="input-field col s4">
             <label for="_name"><b>BMI</b></label>
             <br>
-          <input id="_name" name="Humidity" type="text" class="validate">
+          <input id="_name" name="BMI" type="text" class="validate">
 
         </div>
+    
 
         <div class="input-field col s4">
 
             <label for="last_name"><b>Diabetes Pedigree Function Value</b></label>
               <br>
-            <input id="last_name"  name="Oxygen" type="text" class="validate">
+            <input id="last_name"  name="DiabetesPedigreeFunction" type="text" class="validate">
   
           </div>
   
           <div class="input-field col s4">
               <label for="_name"><b>Age</b></label>
               <br>
-            <input id="_name" name="Humidity" type="text" class="validate">
+            <input id="_name" name="Age" type="text" class="validate">
   
           </div>
+
 
       </div>
 
@@ -209,10 +197,6 @@
   </footer>
 
 
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src=".js/materialize.js"></script>
-  <script src="js/init.js"></script>
 
   </body>
 </html>
