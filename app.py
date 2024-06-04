@@ -19,15 +19,18 @@ def predict():
     
     # Reshape the array to include a batch dimension
     features_array = np.array([int_features])
-
     print("\ntype of features_array: ", type(features_array))
     
     # Model prediction
     prediction = model.predict(features_array)
     output = '{0:.{1}f}'.format(prediction[0][0], 1)
 
-    if output == '1.0':  # Make sure the comparison is done with a string if output is formatted as string
-        print("DIABETES")
+    print("\n\n\n\nPrediction tables: ",prediction, "\n\n\nPrediction is: ",output,"\n\n",print(type(output)))
+    output = float(output)
+
+    if output > 0.5:  # Make sure the comparison is done with a string if output is formatted as string
+        
+        print("val < 0.5 = DIABETES")
         return render_template('index.html',pred='You have diabetes.')
     else:
         print("NO NOTHING!")
