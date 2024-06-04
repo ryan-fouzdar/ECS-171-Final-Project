@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>ECS 171 Final Project</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Diabetes Neural Net</a>
+      
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">Do you have Diabeties?</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Predict the probability of being Diabetic:
+        <br>
+        </h5>
+      </div>
+    <!--ROWS FOR INPUTS -->
+              <div class="row"></div>
+    <form action='/predict' method="POST" class="col s12">
+      <div class="row">
+
+        <div class="input-field col s4">
+            <label for="PregNum"><b>Pregnancies</b></label>
+            <br>
+          <input   id="PregNum" name='Pregnancies'type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+
+          <label for="GluNum"><b>Glucose</b></label>
+            <br>
+          <input id="GluNum"  name="Glucose" type="text" class="validate">
+
+        </div>
+
+        <div class="input-field col s4">
+            <label for="BloodPressNum"><b>Blood Pressure</b></label>
+            <br>
+          <input id="BloodPressNum" name="BloodPressure" type="text" class="validate">
+
+        </div>
+
+        <div class="input-field col s4">
+            <label for="SkinNum"><b>Skin Thickness</b></label>
+            <br>
+          <input   id="SkinNum" name='SkinThickess'type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+
+          <label for="InsulinNum"><b>Insulin</b></label>
+            <br>
+          <input id="InsulinNum"  name="Insulin" type="text" class="validate">
+
+        </div>
+
+        <div class="input-field col s4">
+            <label for="BMINum"><b>BMI</b></label>
+            <br>
+          <input id="BMINum" name="BMI" type="text" class="validate">
+
+        </div>
+    
+
+        <div class="input-field col s4">
+
+            <label for="DPFNum"><b>Diabetes Pedigree Function Value</b></label>
+              <br>
+            <input id="DPFNum"  name="DiabetesPedigreeFunction" type="text" class="validate">
+  
+          </div>
+  
+          <div class="input-field col s4">
+              <label for="AgeNum"><b>Age</b></label>
+              <br>
+            <input id="AgeNum" name="Age" type="text" class="validate">
+  
+          </div>
+
+
+      </div>
+
+      <div class="row center">
+
+          <button type="submit" class="btn-large waves-effect waves-light orange">Predict Probability</button>
+      </div>
+    </form>
+      </div>
+
+      <br><h4 align="center"<b>{{pred}}</b></h4>
+        <br>
+
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">pregnant_woman</i></h2>
+            <h5 class="center">Pregnancies</h5>
+
+            <p class="light">During pregnancy, women may develop gestational diabetes, a condition where high blood sugar levels appear for the first time. This condition not only affects the health of the mother but also poses risks to the baby, including higher chances of obesity and type 2 diabetes later in life. Effective management of blood sugar through diet, exercise, and, if necessary, medication during pregnancy is crucial to ensure the health of both mother and child.</p>
+          </div>
+              <a href="https://www.niddk.nih.gov/health-information/diabetes/diabetes-pregnancy">
+              <button class="btn waves-effect waves-light" type="submit" name="action">Check
+
+      <i class="material-icons right">send</i>
+              </button></a>
+        </div>
+    <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">airline_seat_recline_extra</i></h2>
+            <h5 class="center">Be Active</h5>
+
+            <p class="light">Maintaining an active lifestyle is crucial in managing diabetes, as regular exercise helps regulate blood sugar levels and increases insulin sensitivity. Engaging in physical activities like walking, cycling, or swimming can also aid in weight management, which is vital for reducing diabetes complications. Additionally, consistent exercise contributes to overall well-being and can help prevent additional health issues associated with diabetes, such as cardiovascular disease.</p>
+          </div>
+              <a href="https://www.ncbi.nlm.nih.gov/books/NBK549946/">
+                <button class="btn waves-effect waves-light" type="submit" name="action">Check
+                  <i class="material-icons right">send</i>
+                          </button>
+              </a>
+              
+        </div>
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">cake</i></h2>
+            <h5 class="center">Crime Reports</h5>
+
+            <p class="light">Diet plays a pivotal role in managing diabetes, as food directly influences blood sugar levels. Choosing the right foods, like those low in simple sugars and high in fiber, can help maintain steady glucose levels and prevent spikes that are harmful to diabetic individuals. Moreover, a balanced diet rich in nutrients supports overall health and can mitigate some of the long-term risks associated with diabetes, such as heart disease and kidney damage.</p>
+          </div>
+
+              <a href="https://medlineplus.gov/diabeticdiet.html">
+                <button class="btn waves-effect waves-light" type="submit" name="action">Check
+                  <i class="material-icons right">send</i>
+                          </button>
+              </a>
+        </div>
+
+
+    </div>
+    <br><br>
+  </div>
+  </div>>
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">ECS 171 Team: </h5>
+          <p class="grey-text text-lighten-4">Brody Roberts<br>Quinn Broderick<br>Arista Chauhan<br>Ryan Fouzdar<br>Cynthia Segundo</p>
+
+
+        </div>
+        
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Page Made by <a class="orange-text text-lighten-3" href="https://github.com/brody2002">Brody Roberts</a>
+      </div>
+    </div>
+  </footer>
+
+
+
+  </body>
+</html>
