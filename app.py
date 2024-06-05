@@ -4,6 +4,7 @@ import numpy as np
 
 app = Flask(__name__, template_folder='./templates')
 print("\n\n\nfinding model: \n\n\n")
+print("running gpt.keras")
 model = load_model('./saved_models/gpt.keras')
 
 
@@ -14,8 +15,15 @@ def hello_world():
 
 @app.route('/predict', methods=['POST', 'GET'])
 def predict():
-    int_features = [float(x) for x in request.form.values()]
-    print("\n\n\nRegularList:\n\n", int_features, "\n\n")
+    int_features = []
+    for x in request.form.values():
+        try:
+            int_features.append(float(x))
+        except ValueError:
+            return render_template('index.html',pred='Make sure to input float values for every input!')
+        
+
+
     
     # Reshape the array to include a batch dimension
     features_array = np.array([int_features])
@@ -35,6 +43,6 @@ def predict():
     else:
         print("NO NOTHING!")
         return render_template('index.html',pred="YIPEE! no diabetes")
-    
+
 if __name__ == '__main__':
     app.run(debug=True)
