@@ -4,7 +4,7 @@ import numpy as np
 
 app = Flask(__name__, template_folder='./templates')
 print("\n\n\nfinding model: \n\n\n")
-model = load_model('./saved_models/saved_model.keras')
+model = load_model('./saved_models/gpt.keras')
 
 
 @app.route('/')
@@ -34,7 +34,7 @@ def predict():
         return render_template('index.html',pred='You have diabetes.')
     else:
         print("NO NOTHING!")
-        return render_template('index.html', result="YIPEE! no diabetes")
-
+        return render_template('index.html',pred="YIPEE! no diabetes")
+    
 if __name__ == '__main__':
     app.run(debug=True)
