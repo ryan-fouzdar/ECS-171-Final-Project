@@ -5,7 +5,7 @@ import numpy as np
 app = Flask(__name__, template_folder='./templates')
 print("\n\n\nfinding model: \n\n\n")
 print("running gpt.keras")
-model = load_model('./saved_models/gpt.keras')
+model = load_model('./saved_models/better_model.keras')
 
 
 @app.route('/')
@@ -20,17 +20,30 @@ def predict():
         try:
             int_features.append(float(x))
         except ValueError:
-            return render_template('index.html',pred='Make sure to input float values for every input!')
-        
-
-
+            return render_template('index.html',pred='Make sure to input numeric values for every input!')
     
+    #through the values in int_features into the same scalar used from the notebook
+    from joblib import load
+
+    # Load the scaler
+    scaler = load('./saved_scalars/scaler.joblib')
+
+
+    print('transform?: ')
+    # Use the loaded scaler to transform the test set or new data
+    int_features = scaler.transform([int_features])
+    print('transformed values: ', int_features)
+
+
+
+
     # Reshape the array to include a batch dimension
     features_array = np.array([int_features])
-    print("\ntype of features_array: ", type(features_array))
+    print("\ntype of features_array: ", (features_array))
     
     # Model prediction
-    prediction = model.predict(features_array)
+    prediction = model.predict(features_array[0])
+    print("prediction: ",prediction)
     output = '{0:.{1}f}'.format(prediction[0][0], 1)
 
     print("\n\n\n\nPrediction tables: ",prediction, "\n\n\nPrediction is: ",output,"\n\n",print(type(output)))
