@@ -25,6 +25,12 @@ Once you've landed on our page, you can manually input numeric values.
 
 Note: all inputs should be filled in. 
 
+**Live Demo**
+
+The video can be found here:
+
+https://youtu.be/jpbJH02NdZU
+
 **REPORT**
 
 
