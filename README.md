@@ -8,7 +8,10 @@ Diabetes dataset from Kaggle. https://www.kaggle.com/datasets/ehababoelnaga/diab
 
 # **DEMO**
 
-**Make sure you run everything from our neuralNet.ipynb file first!** There are a bunch of files that you will need to generate yourself that are being ignored from GitHub's git ignore file. 
+**Make sure you run everything from our neuralNet.ipynb file first!** There are a bunch of files that you will need to generate yourself that are being ignored from GitHub's git ignore file. This includes:
+
++ Best Neural Network Model
++ Neural Network's scalar values 
 
 To run the HTML page, go to the root folder of our repository and type in the instruction:
 
