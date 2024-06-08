@@ -2,11 +2,11 @@
 Diabetes Predictive Modeling for ECS 171 final project. Did decision trees, logistic regression and neural net models to see which one accurately predicts the results the best. Code and accuracy is in the ipynb files.
 
 **DATASET**
-****
+
 Diabetes dataset from Kaggle. https://www.kaggle.com/datasets/ehababoelnaga/diabetes-dataset/data
 
 **DEMO**
-****
+
 To run the HTML page, go to the root file of our repository and type in the instruction:
 
 ```
