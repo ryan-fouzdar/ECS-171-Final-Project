@@ -27,9 +27,7 @@ Note: all inputs should be filled in.
 
 **Live Demo**
 
-The video can be found here:
-
-https://youtu.be/jpbJH02NdZU
+The video can be found here: https://youtu.be/jpbJH02NdZU
 
 **REPORT**
 
