@@ -8,7 +8,7 @@ Diabetes dataset from Kaggle. https://www.kaggle.com/datasets/ehababoelnaga/diab
 
 **DEMO**
 
-To run the HTML page, go to the root file of our repository and type in the instruction:
+To run the HTML page, go to the root folder of our repository and type in the instruction:
 
 ```
 python app.py
