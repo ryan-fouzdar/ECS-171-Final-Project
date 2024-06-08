@@ -16,6 +16,9 @@ python app.py
 
 The terminal should provide you a link to our local host server.
 
+![image](https://github.com/ryan-fouzdar/ECS-171-Final-Project/assets/72287521/14332617-b0a0-4f27-acf0-ae05ef79825c)
+
+
 Note: If you open our HTML file via the VSCode local host extension, our html page will load incorrectly. 
 
 Once you've landed on our page, you can manually input numeric values. 
