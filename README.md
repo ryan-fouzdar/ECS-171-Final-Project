@@ -14,7 +14,11 @@ To run the HTML page, go to the root file of our repository and type in the inst
 python app.py
 ```
 
-Then you will need to manually input numeric values. 
+The terminal should provide you a link to our local host server.
+
+Note: If you open our HTML file via the VSCode local host extension, our html page will load incorrectly. 
+
+Once you've landed on our page, you can manually input numeric values. 
 
 Note: all inputs should be filled in. 
 
