@@ -1,6 +1,7 @@
 from flask import Flask, request, url_for, redirect, render_template
 from tensorflow.keras.models import load_model
 import numpy as np
+import joblib
 
 app = Flask(__name__, template_folder='./templates')
 print("\n\n\nfinding model: \n\n\n")
@@ -27,9 +28,8 @@ def predict():
 
     # Load the scaler
     scaler = load('./saved_scalars/scaler.joblib')
+    dtc = joblib.load('./saved_models/dtc.joblib')
 
-
-    print('transform?: ')
     # Use the loaded scaler to transform the test set or new data
     int_features = scaler.transform([int_features])
     print('transformed values: ', int_features)
@@ -39,7 +39,14 @@ def predict():
 
     # Reshape the array to include a batch dimension
     features_array = np.array([int_features])
-    print("\ntype of features_array: ", (features_array))
+    
+
+  
+
+    features_array_dtc = np.array(int_features[0]).reshape(1,-1)
+    print(features_array_dtc)
+    prediction_dtc = dtc.predict(features_array_dtc)
+    print("\n\nDTC prediction: ", prediction_dtc)
     
     # Model prediction
     prediction = model.predict(features_array[0])
