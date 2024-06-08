@@ -1,14 +1,14 @@
-**GOAL**
+#**GOAL**
 
 Diabetes Predictive Modeling for ECS 171 final project. Did decision trees, logistic regression and neural net models to see which one accurately predicts the results the best. Code and accuracy is in the ipynb files.
 
-**DATASET**
+#**DATASET**
 
 Diabetes dataset from Kaggle. https://www.kaggle.com/datasets/ehababoelnaga/diabetes-dataset/data
 
 **DEMO**
 
-Make sure you run everything from our neuralNet.ipynb file first! There are a bunch of files that you will need to generate yourself that are being ignored from GitHub's git ignore file. 
+**Make sure you run everything from our neuralNet.ipynb file first!** There are a bunch of files that you will need to generate yourself that are being ignored from GitHub's git ignore file. 
 
 To run the HTML page, go to the root folder of our repository and type in the instruction:
 
@@ -27,10 +27,10 @@ Once you've landed on our page, you can manually input numeric values.
 
 Note: all inputs should be filled in. 
 
-**Live Demo**
+#**Live Demo**
 
 The video can be found here: https://youtu.be/jpbJH02NdZU
 
-**REPORT**
+#**REPORT**
 
 
